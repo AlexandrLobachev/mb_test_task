@@ -41,14 +41,14 @@ class Triangle(Figure):
         p = sum(self.sides) / 2
         return math.sqrt(math.prod([p] + [p - s for s in self.sides]))
 
-    def is_right_triangle(self)-> bool:
+    def is_right_triangle(self) -> bool:
         """Являеться ли треугольник прямоугольным."""
         side_a = self.sides[0]
         side_b = self.sides[1]
         side_c = self.sides[2]
         return (side_c ** 2 == side_a ** 2 + side_b ** 2
-            or side_a ** 2 == side_b ** 2 + side_c ** 2
-            or side_b ** 2 == side_a ** 2 + side_c ** 2)
+                or side_a ** 2 == side_b ** 2 + side_c ** 2
+                or side_b ** 2 == side_a ** 2 + side_c ** 2)
 
 
 class Circle(Figure):
